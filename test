@@ -1,0 +1,84 @@
+from random import randint
+num = randint(1,2)
+totalcomtime = 0
+totalhuman = 0
+internaltimer = 0
+num2 = int(input("what do you want person A to do? (1 tell) (2 stay quite)(3 random)"))
+num = int(input("what do you want person B to do? (1 tell) (2 stay quite)(3 random)"))
+trails = int(input("number of trails"))
+print("="*30)
+for multiplier in range(trails):
+    if num == 1:
+        internaltimer = internaltimer + 1
+        if num2 == 1:
+            totalcomtime = totalcomtime + 4
+            totalhuman = totalhuman + 4
+        if num2 == 2:
+            totalhuman = totalhuman + 6
+        if num2 == 3:
+            num2 = randint(1,2)
+            if num2 == 1:
+                totalcomtime = totalcomtime + 4
+                totalhuman = totalhuman + 4
+                num2 = 3
+            if num2 == 2:
+                totalhuman = totalhuman + 6
+                num2 = 3
+            
+    if num == 2:
+        internaltimer = internaltimer +1
+        if num2 == 1:
+            totalcomtime = totalcomtime + 6
+        if num2 == 2:
+            totalcomtime = totalcomtime + 2
+            totalhuman = totalhuman + 2
+        if num2 == 3:
+            num2 = randint(1,2)
+            if num2 == 1:
+                totalcomtime = totalcomtime + 6
+                num2 = 3
+            if num2 == 2:
+                totalhuman = totalhuman + 2
+                totalcomtime = totalcomtime+2
+                num2 = 3
+    if num == 3:
+        num = randint(1,2)
+        if num == 1:
+            internaltimer = internaltimer + 1
+            if num2 == 1:
+                totalcomtime = totalcomtime + 4
+                totalhuman = totalhuman + 4
+            if num2 == 2:
+                totalhuman = totalhuman + 6
+            if num2 == 3:
+                num2 = randint(1,2)
+                if num2 == 1:
+                    totalcomtime = totalcomtime + 4
+                    totalhuman = totalhuman + 4
+                    num2 = 3
+                if num2 == 2:
+                    totalhuman = totalhuman + 6
+                    num2 = 3
+            
+        if num == 2:
+            internaltimer = internaltimer +1
+            if num2 == 1:
+                totalcomtime = totalcomtime + 6
+            if num2 == 2:
+                totalcomtime = totalcomtime + 2
+                totalhuman = totalhuman + 2
+            if num2 == 3:
+                num2 = randint(1,2)
+                if num2 == 1:
+                    totalcomtime = totalcomtime + 6
+                    num2 = 3
+                if num2 == 2:
+                    totalhuman = totalhuman + 2
+                    totalcomtime = totalcomtime+2
+                    num2 = 3
+print("="*30)
+print("total time A spends in jail equals", totalhuman,"years") 
+print("total time B spends in jail equals", totalcomtime,"years") 
+print("="*30)
+print("the average time A spend in jail", format(float(totalhuman)/float(internaltimer),".2f"))
+print("the average time B spend in jail", format(float(totalcomtime)/float(internaltimer),".2f"))
