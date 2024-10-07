@@ -5,7 +5,7 @@ totalhuman = 0
 internaltimer = 0
 num2 = int(input("what do you want person A to do? (1 tell) (2 stay quite)(3 random)"))
 num = int(input("what do you want person B to do? (1 tell) (2 stay quite)(3 random)"))
-trails = int(input("number of trails"))
+trails = int(input("number of trials"))
 print("="*30)
 for multiplier in range(trails):
     if num == 1:
