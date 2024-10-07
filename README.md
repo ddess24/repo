@@ -1,2 +1,2 @@
 # repo
-this is a way to simulate the prisoners dilemma 
+this is a way to simulate the prisoners dilemma.
